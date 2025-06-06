@@ -1,8 +1,8 @@
 # Microservice to lear golang
 
+## Requerimenrs
 ```sh
 
-## Requerimenrs
 - () the api should be able to create a new category
 - () the api should be able to list all category
 - () the api should be able to get a category
@@ -11,11 +11,64 @@
 - () the api should send a event to a broker when a category name is update
 ```
 
+## Next steps
 ```sh
 
-## Next steps
 - () dockerize
 - () Permission roles
 - () deploy
 
 ```
+
+## folder pattener in golang community
+```sh
+	./
+	|
+	|--- *cmd*
+    |------- api
+	|--------- main.go
+    |
+    |
+    |
+
+
+```
+
+## FramWorks used
+### - Gin (http router with our routes )
+```sh
+
+    ``` 
+    ...
+
+        router := gin.Default() //Default is a instance in the gin's router with middleware defualt and preconfigured.
+
+        router.GET("/<route>", HandleFunc) //.get() is a verb in the http protocol that get a route and a handle function, which is called wh when tha route is called
+
+     ```
+
+
+
+
+```
+
+### - Air-Verse Live reload for Go app
+
+    command to install: `go install github.com/air-verse/air@latest`
+
+#### start air
+    for init air use comand: "air init"
+#### config  
+    a file called .air.toml is created
+    This is where you will point to the boot file
+
+    ```
+    cmd = "go build -o .temp/main <path do main.go> "
+
+    ```
+
+#### init air
+    To ru the server with Air usethe command: `air`
+
+
+
