@@ -24,12 +24,12 @@
 ```sh
 	./
 	|
-	|--- *cmd*
+	|--- **cmd**
     |------- api
 	|--------- main.go
-    |
-    |
-    |
+    |--- internal -> all files related to tour application's file stay here | this is all about community standards
+    |--------- entities -> all entities in the project
+    |------------ category.go
 
 
 ```
@@ -71,4 +71,40 @@
     To ru the server with Air usethe command: `air`
 
 
+## Folder Entities
 
+---
+    title: Entities
+    description: "stay  entities from project"
+
+
+---
+
+### Category
+
+    the  category structure  has some fields like:
+        Id uint
+        Name string
+        CreateData time.Time
+        UpdateData time.Time
+
+    #### The community stardard is to  create a function to instantiate  category structure
+
+    ```
+        // create category recommended
+func (categ Category) CreateCategory(Nome string) (*Category, error) {
+	category := Category{
+		Nome:        Nome,
+		DataCreated: time.Now(),
+		DataUpdate:  time.Now(),
+	}
+
+	//validar
+	if err := category.isValid(); err != nil {
+		//retorna um erro
+		return nil, err
+	}
+
+	return &category, nil
+}
+    ```
