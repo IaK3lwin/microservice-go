@@ -14,7 +14,7 @@ func (categUseCase useCaseCategory) CreateCategory(nome string) error {
 	//validndo erro
 	if err != nil {
 
-		return fmt.Errorf("Houve um erro na camada de use case, tentativa de criar categoria mas algo deu erro: ", err)
+		return fmt.Errorf("Houve um erro na camada de use case, tentativa de criar categoria mas algo deu erro: ")
 	}
 
 	//TODO: persistir dados no banxo de dados
