@@ -27,9 +27,13 @@
 	|--- **cmd**
     |------- api
 	|--------- main.go
-    |--- internal -> all files related to tour application's file stay here | this is all about community standards
-    |--------- entities -> all entities in the project
-    |------------ category.go
+    |--- internal   -> all files related to tour application's file stay here | this is all about community standards
+    |--------- entities     -> all entities in the project
+    |--------------- category.go
+    |---------- use_case     -> here are the business rules
+    |---------------- category      | bissiness  category  rules
+    |-----------------------category_usecase.go     -> define struct categoryUsecase
+    |-----------------------createCategory.go   -> create category funcation
 
 
 ```
@@ -90,7 +94,7 @@
 
     #### The community stardard is to  create a function to instantiate  category structure
 
-    ```
+    <code>
         // create category recommended
 func (categ Category) CreateCategory(Nome string) (*Category, error) {
 	category := Category{
@@ -107,4 +111,8 @@ func (categ Category) CreateCategory(Nome string) (*Category, error) {
 
 	return &category, nil
 }
-    ```
+    </code>
+
+## UseCase Folder
+
+    here are the business rules

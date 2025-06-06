@@ -14,7 +14,7 @@ type Category struct {
 }
 
 // create category recommended
-func (categ Category) CreateCategory(Nome string) (*Category, error) {
+func CreateCategory(Nome string) (*Category, error) {
 	category := Category{
 		Nome:        Nome,
 		DataCreated: time.Now(),
